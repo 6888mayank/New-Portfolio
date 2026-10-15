@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MayankOS - Retro Desktop</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- CRT scanline overlay -->
+  <div class="crt-overlay"></div>
+
+  <!-- Retro Desktop Background Grid -->
+  <div id="desktop">
+    <div class="desktop-icon" onclick="openWindow('bio-win')">
+      <div class="icon-img">👨‍💻</div>
+      <span>About Mayank</span>
+    </div>
+
+    <div class="desktop-icon" onclick="openWindow('exp-win')">
+      <div class="icon-img">💼</div>
+      <span>Experience</span>
+    </div>
+
+    <div class="desktop-icon" onclick="openWindow('proj-win')">
+      <div class="icon-img">🚀</div>
+      <span>Projects</span>
+    </div>
+
+    <div class="desktop-icon" onclick="openWindow('skills-win')">
+      <div class="icon-img">⚡</div>
+      <span>Tech Skills</span>
+    </div>
+
+    <div class="desktop-icon" onclick="openWindow('edu-win')">
+      <div class="icon-img">🎓</div>
+      <span>Education</span>
+    </div>
+
+    <div class="desktop-icon" onclick="openWindow('term-win')">
+      <div class="icon-img">📟</div>
+      <span>Terminal.exe</span>
+    </div>
+
+    <div class="desktop-icon" onclick="openWindow('contact-win')">
+      <div class="icon-img">✉️</div>
+      <span>Contact.msg</span>
+    </div>
+
+    <!-- Desktop Watermark -->
+    <div class="desktop-watermark">
+      <h1>Mayank Sharma</h1>
+      <p>Software & AI Engineer • GLA / IIT Guwahati</p>
+    </div>
+  </div>
+
+  <!-- WINDOW: About Mayank -->
+  <div id="bio-win" class="window win-outset" style="top: 30px; left: 160px; width: 620px; height: 440px;">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'bio-win')">
+      <div class="titlebar-left">
+        <span class="win-icon">👨‍💻</span>
+        <span>About Me - Mayank Sharma</span>
+      </div>
+      <div class="titlebar-controls">
+        <button class="win-btn" onclick="minimizeWindow('bio-win')">_</button>
+        <button class="win-btn" onclick="maximizeWindow('bio-win')">□</button>
+        <button class="win-btn close" onclick="closeWindow('bio-win')">✕</button>
+      </div>
+    </div>
+    <div class="window-menu">
+      <span>File</span>
+      <span>View</span>
+      <span>Help</span>
+    </div>
+    <div class="window-content win-inset">
+      <div class="bio-card">
+        <div class="bio-avatar">MS</div>
+        <div class="bio-info">
+          <h3>Mayank Sharma</h3>
+          <p class="role">Software Engineer & AI Engineer</p>
+          <p class="loc">📍 Noida / Mathura, India • GLA University & IIT Guwahati</p>
+        </div>
+      </div>
+      
+      <h2 class="section-title"><span>📜</span> Professional Summary</h2>
+      <div class="text-box win-inset">
+        <p>Software engineer pursuing a Bachelor's degree in Computer Science (Data Science, Artificial Intelligence, Machine Learning), with hands-on experience in <strong>Software Engineering, AI Engineering, and ML Engineering</strong>.</p>
+        <br>
+        <p>Skilled in building high-throughput APIs and services with <strong>Python, Java, Node.js, and Express.js</strong>, applying debugging, performance optimization, distributed systems concepts, and event-driven architecture.</p>
+        <br>
+        <p>Practical project experience with <strong>Generative AI and Agentic AI systems</strong> — including multi-agent workflows, tool execution, multi-step reasoning, and task orchestration, plus <strong>Retrieval-Augmented Generation (RAG)</strong> pipelines using vector databases and embedding search for enterprise knowledge systems.</p>
+      </div>
+
+      <h2 class="section-title"><span>🎯</span> Focus & Continued Learning</h2>
+      <div class="text-box win-inset">
+        <ul style="padding-left: 18px; line-height: 1.6;">
+          <li>Fine-tuning Small Language Models (SLMs) and domain-specific NLP models.</li>
+          <li>Reinforcement Learning improvement loops applied to language & search systems (hybrid search & reranking).</li>
+          <li>Applying agentic AI & multi-step reasoning to complex enterprise workflows (supply chain, logistics, manufacturing).</li>
+        </ul>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span>Status: Ready</span>
+      <span>Profile: Active</span>
+    </div>
+  </div>
+
+  <!-- WINDOW: Experience -->
+  <div id="exp-win" class="window win-outset" style="top: 50px; left: 190px; width: 660px; height: 460px; display: none;">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'exp-win')">
+      <div class="titlebar-left">
+        <span class="win-icon">💼</span>
+        <span>Work Experience.doc</span>
+      </div>
+      <div class="titlebar-controls">
+        <button class="win-btn" onclick="minimizeWindow('exp-win')">_</button>
+        <button class="win-btn" onclick="maximizeWindow('exp-win')">□</button>
+        <button class="win-btn close" onclick="closeWindow('exp-win')">✕</button>
+      </div>
+    </div>
+    <div class="window-content win-inset">
+      <h2 class="section-title"><span>💼</span> Professional Experience</h2>
+
+      <!-- Satya Support Services -->
+      <div class="exp-item win-inset">
+        <div class="exp-header">
+          <span class="exp-title">Junior Software Developer (AI)</span>
+          <span class="exp-date">June 2026 – Present</span>
+        </div>
+        <div class="exp-company">Satya Support Services • Noida, India</div>
+        <ul class="exp-bullets">
+          <li>Support software engineering and AI engineering efforts by developing and maintaining responsive web applications (React.js, JavaScript, HTML, CSS) backed by Python/Node.js and Express.js event-driven services.</li>
+          <li>Build, debug, and optimize REST APIs and services for efficient, reliable data communication between frontend and backend systems, with attention to performance optimization and reliability.</li>
+          <li>Implement authentication and authorization mechanisms to secure application workflows and protect user data.</li>
+          <li>Write clean, reusable, production-quality code following SDLC best practices; provide operational support through code reviews, documentation, and rigorous testing/validation strategies before release.</li>
+        </ul>
+      </div>
+
+      <!-- Enigoal -->
+      <div class="exp-item win-inset">
+        <div class="exp-header">
+          <span class="exp-title">Full Stack Developer Intern</span>
+          <span class="exp-date">Jan 2025 – Aug 2025</span>
+        </div>
+        <div class="exp-company">Enigoal • Noida, India</div>
+        <ul class="exp-bullets">
+          <li>Developed and enhanced web applications from scratch using modern frontend technologies, building responsive and interactive UI components with cross-browser compatibility.</li>
+          <li>Applied testing and validation strategies — functional, UI, and regression testing — to identify and resolve bugs and support overall system quality.</li>
+          <li>Collaborated cross-functionally with the team on usability, design, and user experience through effective communication and teamwork; assisted with debugging, feature enhancements, and deployment.</li>
+        </ul>
+      </div>
+
+      <!-- Coding Blocks -->
+      <div class="exp-item win-inset">
+        <div class="exp-header">
+          <span class="exp-title">Full Stack Developer Intern</span>
+          <span class="exp-date">July 2024 – Aug 2024</span>
+        </div>
+        <div class="exp-company">Coding Blocks • Mathura, India</div>
+        <ul class="exp-bullets">
+          <li>Built a full-stack web application using React.js, JavaScript, HTML, and CSS, integrating backend APIs end-to-end.</li>
+          <li>Developed responsive UI components and applied performance optimization techniques for a smoother user experience.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span>3 Positions Recorded</span>
+      <span>Total Exp: 1.5+ Years</span>
+    </div>
+  </div>
+
+  <!-- WINDOW: Projects -->
+  <div id="proj-win" class="window win-outset" style="top: 40px; left: 140px; width: 720px; height: 480px; display: none;">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'proj-win')">
+      <div class="titlebar-left">
+        <span class="win-icon">🚀</span>
+        <span>Projects & AI Workflows</span>
+      </div>
+      <div class="titlebar-controls">
+        <button class="win-btn" onclick="minimizeWindow('proj-win')">_</button>
+        <button class="win-btn" onclick="maximizeWindow('proj-win')">□</button>
+        <button class="win-btn close" onclick="closeWindow('proj-win')">✕</button>
+      </div>
+    </div>
+    <div class="window-content win-inset">
+      <h2 class="section-title"><span>🤖</span> Featured Projects</h2>
+      
+      <div class="projects-grid">
+        <!-- Agentic-AI -->
+        <div class="proj-card win-outset">
+          <div>
+            <div class="proj-title">🧠 Agentic-AI System</div>
+            <div class="proj-desc">
+              Built an autonomous agentic multi-agent workflow featuring tool execution, task orchestration, and multi-step reasoning. Implemented a production RAG knowledge base pipeline with vector embeddings for grounded, hallucination-free retrieval.
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">LLM</span>
+            <span class="tag">Agentic AI</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Vector DB</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <!-- Payment Orchestration Engine -->
+        <div class="proj-card win-outset">
+          <div>
+            <div class="proj-title">💳 Payment Orchestration Engine</div>
+            <div class="proj-desc">
+              Robust backend service for orchestrating, validating, and processing multi-gateway payment workflows via resilient REST APIs with Spring Boot and Spring AI capabilities.
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Spring AI</span>
+            <span class="tag">Payment Gateway</span>
+            <span class="tag">REST API</span>
+          </div>
+        </div>
+
+        <!-- Order Management System -->
+        <div class="proj-card win-outset">
+          <div>
+            <div class="proj-title">📦 Order Management System</div>
+            <div class="proj-desc">
+              Authenticated, event-driven order processing platform featuring JWT security, distributed order status updates, responsive dashboard UI, and high-throughput data handling.
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">JWT</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Event-Driven</span>
+          </div>
+        </div>
+
+        <!-- Speedopro -->
+        <div class="proj-card win-outset">
+          <div>
+            <div class="proj-title">🚗 Speedopro (speedo-pro.com)</div>
+            <div class="proj-desc">
+              Full-featured ride-hailing web platform inspired by Uber/Ola/Rapido. Features fare estimation, real-time driver/rider flows, map integration, and responsive user interfaces.
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">Full Stack</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">APIs</span>
+            <span class="tag">Geolocation</span>
+          </div>
+        </div>
+
+        <!-- Grassroot -->
+        <div class="proj-card win-outset">
+          <div>
+            <div class="proj-title">🏫 Coaching Center Platform (grassroot.com)</div>
+            <div class="proj-desc">
+              Interactive educational platform featuring student admission modules, course schedules, responsive interfaces, and Node.js backend.
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">DOM</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- Lakshayraj Foundation -->
+        <div class="proj-card win-outset">
+          <div>
+            <div class="proj-title">🤝 Lakshayraj Foundation Website</div>
+            <div class="proj-desc">
+              Official web platform for a non-profit foundation, providing donation portals, activity galleries, volunteer registrations, and community outreach features.
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span>6 Projects Listed</span>
+      <span>Click any project to view</span>
+    </div>
+  </div>
+
+  <!-- WINDOW: Technical Skills -->
+  <div id="skills-win" class="window win-outset" style="top: 70px; left: 220px; width: 600px; height: 430px; display: none;">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'skills-win')">
+      <div class="titlebar-left">
+        <span class="win-icon">⚡</span>
+        <span>Technical Skills.reg</span>
+      </div>
+      <div class="titlebar-controls">
+        <button class="win-btn" onclick="minimizeWindow('skills-win')">_</button>
+        <button class="win-btn" onclick="maximizeWindow('skills-win')">□</button>
+        <button class="win-btn close" onclick="closeWindow('skills-win')">✕</button>
+      </div>
+    </div>
+    <div class="window-content win-inset">
+      <h2 class="section-title"><span>⚡</span> Technical Inventory</h2>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">🤖 AI / Generative AI / ML Engineering</div>
+        <div class="skills-list">
+          <span class="skill-badge highlight">Agentic AI (Multi-Agent)</span>
+          <span class="skill-badge highlight">Tool Execution & Reasoning</span>
+          <span class="skill-badge highlight">RAG Pipelines</span>
+          <span class="skill-badge highlight">Vector Databases</span>
+          <span class="skill-badge">LLMs & Prompt Engineering</span>
+          <span class="skill-badge">Embedding-based Search</span>
+          <span class="skill-badge">NLP Models</span>
+          <span class="skill-badge">Machine Learning</span>
+          <span class="skill-badge">AI Chatbots</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">💻 Programming Languages</div>
+        <div class="skills-list">
+          <span class="skill-badge highlight">Python</span>
+          <span class="skill-badge highlight">Java</span>
+          <span class="skill-badge highlight">JavaScript (ES6)</span>
+          <span class="skill-badge highlight">TypeScript</span>
+          <span class="skill-badge">C</span>
+          <span class="skill-badge">SQL</span>
+          <span class="skill-badge">HTML5 & CSS3</span>
+          <span class="skill-badge">R</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">🛠️ Frameworks & Libraries</div>
+        <div class="skills-list">
+          <span class="skill-badge highlight">React.js</span>
+          <span class="skill-badge highlight">Node.js</span>
+          <span class="skill-badge highlight">Express.js</span>
+          <span class="skill-badge highlight">Spring Boot</span>
+          <span class="skill-badge highlight">Spring AI</span>
+          <span class="skill-badge">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">☁️ Cloud, Databases & DevOps</div>
+        <div class="skills-list">
+          <span class="skill-badge">AWS (Applied)</span>
+          <span class="skill-badge">GCP & Azure (Fundamentals)</span>
+          <span class="skill-badge">MongoDB</span>
+          <span class="skill-badge">Supabase</span>
+          <span class="skill-badge">Vector DBs</span>
+          <span class="skill-badge">SQLite</span>
+          <span class="skill-badge">Git & GitHub</span>
+          <span class="skill-badge">REST API Design</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">🧪 Testing, Validation & Concepts</div>
+        <div class="skills-list">
+          <span class="skill-badge">Functional & UI Testing</span>
+          <span class="skill-badge">Regression Testing</span>
+          <span class="skill-badge">Bug Triage</span>
+          <span class="skill-badge">Distributed Systems</span>
+          <span class="skill-badge">Event-Driven Architecture</span>
+          <span class="skill-badge">Data Structures & Algorithms</span>
+        </div>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span>Loaded 35+ Technical Skills</span>
+      <span>Classification: Expert</span>
+    </div>
+  </div>
+
+  <!-- WINDOW: Education & Certs -->
+  <div id="edu-win" class="window win-outset" style="top: 60px; left: 200px; width: 620px; height: 440px; display: none;">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'edu-win')">
+      <div class="titlebar-left">
+        <span class="win-icon">🎓</span>
+        <span>Education & Certifications</span>
+      </div>
+      <div class="titlebar-controls">
+        <button class="win-btn" onclick="minimizeWindow('edu-win')">_</button>
+        <button class="win-btn" onclick="maximizeWindow('edu-win')">□</button>
+        <button class="win-btn close" onclick="closeWindow('edu-win')">✕</button>
+      </div>
+    </div>
+    <div class="window-content win-inset">
+      <h2 class="section-title"><span>🎓</span> Academic Background</h2>
+      
+      <div class="exp-item win-inset">
+        <div class="exp-header">
+          <span class="exp-title">GLA University, Mathura</span>
+          <span class="exp-date">Sept 2022 – July 2026</span>
+        </div>
+        <div class="exp-company">B.Tech in Computer Science (Data Science, AI & Machine Learning)</div>
+        <p style="font-size: 11.5px; margin-top: 4px; color: #444;">Relevant Coursework: Data Structures & Algorithms, Machine Learning, Information Security, Database Management Systems.</p>
+      </div>
+
+      <div class="exp-item win-inset">
+        <div class="exp-header">
+          <span class="exp-title">Indian Institute of Technology (IIT) Guwahati</span>
+          <span class="exp-date">Nov 2024 – June 2025</span>
+        </div>
+        <div class="exp-company">Advanced Academic Coursework & Applied Project Work</div>
+      </div>
+
+      <div class="exp-item win-inset">
+        <div class="exp-header">
+          <span class="exp-title">GLA University Online</span>
+          <span class="exp-date">July 2026 – Present</span>
+        </div>
+        <div class="exp-company">Continued Technical & Specialized Learning</div>
+      </div>
+
+      <h2 class="section-title"><span>🏅</span> Certifications</h2>
+      <div class="text-box win-inset">
+        <ul style="padding-left: 18px; line-height: 1.8;">
+          <li>🛡️ <strong>Industrial Training in Cyber Security</strong> — Wipro DICE</li>
+          <li>🔐 <strong>Cyber Security Intern</strong> — Eduversity</li>
+          <li>🌐 <strong>Full Stack Web Developer</strong> — Coding Blocks</li>
+          <li>🐍 <strong>Certified Professional Python Developer (CPPD)</strong> — PDAC</li>
+          <li>💻 <strong>Course on Computer Concepts (CCC)</strong> — NIELIT, Government of India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span>Verified Credentials</span>
+      <span>Status: Enrolled</span>
+    </div>
+  </div>
+
+  <!-- WINDOW: Interactive Terminal -->
+  <div id="term-win" class="window win-outset" style="top: 80px; left: 180px; width: 620px; height: 380px; display: none;">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'term-win')">
+      <div class="titlebar-left">
+        <span class="win-icon">📟</span>
+        <span>MS-DOS Prompt - Mayank Sharma AI Terminal</span>
+      </div>
+      <div class="titlebar-controls">
+        <button class="win-btn" onclick="minimizeWindow('term-win')">_</button>
+        <button class="win-btn" onclick="maximizeWindow('term-win')">□</button>
+        <button class="win-btn close" onclick="closeWindow('term-win')">✕</button>
+      </div>
+    </div>
+    <div class="terminal-content win-inset" id="terminal-body" onclick="focusTerminal()">
+      <div class="term-line">MayankOS [Version 2026.10] - 3D Retro Terminal</div>
+      <div class="term-line">(C) 2026 Mayank Sharma. All rights reserved.</div>
+      <div class="term-line" style="color: #ffff00;">Type <strong style="color: #00e5ff;">'help'</strong> to see available commands or explore my portfolio.</div>
+      <div class="term-line">&nbsp;</div>
+      <div id="term-history"></div>
+      <div class="term-input-row">
+        <span class="term-prompt">C:\MAYANK&gt;</span>
+        <input type="text" id="terminal-input" class="term-input" autocomplete="off" spellcheck="false" autofocus>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span>Terminal Active</span>
+      <span>TTY: 80x25</span>
+    </div>
+  </div>
+
+  <!-- WINDOW: Contact -->
+  <div id="contact-win" class="window win-outset" style="top: 100px; left: 240px; width: 500px; height: 380px; display: none;">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'contact-win')">
+      <div class="titlebar-left">
+        <span class="win-icon">✉️</span>
+        <span>Send Message to Mayank</span>
+      </div>
+      <div class="titlebar-controls">
+        <button class="win-btn" onclick="minimizeWindow('contact-win')">_</button>
+        <button class="win-btn" onclick="maximizeWindow('contact-win')">□</button>
+        <button class="win-btn close" onclick="closeWindow('contact-win')">✕</button>
+      </div>
+    </div>
+    <div class="window-content win-inset">
+      <h2 class="section-title"><span>📫</span> Get in Touch</h2>
+      <p style="font-size: 11.5px; margin-bottom: 12px; color: #333;">Feel free to drop a message! I'm always open to discussing Software Engineering, AI/ML roles, and innovative collaborations.</p>
+
+      <form class="contact-form" onsubmit="handleContactSubmit(event)">
+        <div class="form-group">
+          <label>Your Name:</label>
+          <input type="text" id="contact-name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label>Your Email:</label>
+          <input type="email" id="contact-email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Message:</label>
+          <textarea id="contact-msg" placeholder="Hi Mayank, I saw your 3D portfolio..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn win-outset">Send Message 🚀</button>
+        <div id="contact-status" style="font-size: 11px; margin-top: 4px; color: #008000; font-weight: bold;"></div>
+      </form>
+    </div>
+    <div class="window-statusbar">
+      <span>Direct Email Form</span>
+      <span>Encrypted: TLS</span>
+    </div>
+  </div>
+
+  <!-- START MENU -->
+  <div id="start-menu">
+    <div class="start-sidebar">MayankOS 26</div>
+    <div class="start-items">
+      <div class="start-item" onclick="openWindow('bio-win'); toggleStartMenu()">
+        <span>👨‍💻</span> About Mayank
+      </div>
+      <div class="start-item" onclick="openWindow('exp-win'); toggleStartMenu()">
+        <span>💼</span> Experience
+      </div>
+      <div class="start-item" onclick="openWindow('proj-win'); toggleStartMenu()">
+        <span>🚀</span> Projects
+      </div>
+      <div class="start-item" onclick="openWindow('skills-win'); toggleStartMenu()">
+        <span>⚡</span> Technical Skills
+      </div>
+      <div class="start-item" onclick="openWindow('edu-win'); toggleStartMenu()">
+        <span>🎓</span> Education & Certs
+      </div>
+      <div class="start-item" onclick="openWindow('term-win'); toggleStartMenu()">
+        <span>📟</span> MS-DOS Prompt
+      </div>
+      <div class="start-item" onclick="openWindow('contact-win'); toggleStartMenu()">
+        <span>✉️</span> Contact Mayank
+      </div>
+      <div class="start-divider"></div>
+      <div class="start-item" onclick="location.reload()">
+        <span>🔄</span> Restart Desktop
+      </div>
+    </div>
+  </div>
+
+  <!-- TASKBAR -->
+  <div id="taskbar">
+    <button id="start-button" onclick="toggleStartMenu()">
+      <span class="start-flag">🪟</span>
+      <span>Start</span>
+    </button>
+    <div id="taskbar-windows">
+      <!-- Dynamic taskbar items added by app.js -->
+    </div>
+    <div id="tray">
+      <span class="tray-status">● Agentic AI Online</span>
+      <span id="tray-clock">12:00:00 PM</span>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
